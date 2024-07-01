@@ -1,0 +1,258 @@
+@mixin responsive($break) {
+    @if $break == small-screens {
+        @media only screen and (min-width:$berak-small) {
+            @content;
+        };
+    }
+    @else if $break == large-screens {
+        @media only screen and (min-width:$break-large) {
+            @content;
+        };
+    }
+}
+
+
+
+@mixin title-menu-list() {
+    .inform-title {
+        margin: 80px 0 35px;
+        text-align: center;
+        // background-color: aquamarine;
+        
+        @include responsive(large-screens) {
+            margin-bottom: 80px;
+            font: {
+                weight: $font-semibold;
+                size: 5rem;  // 60pt
+            }
+            text-align: left;
+        }
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: $width-wide;
+        margin: auto;
+        
+        @include responsive(large-screens) {
+            position: absolute;
+            right: 0; top: 30px;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            width: 360px;
+            height: 110px;
+            // background-color: aqua;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+
+            @include responsive(large-screens) {
+                margin-left: 150px;
+                width: 200px;
+            }
+
+            li {
+                a {
+                    font: {
+                        weight: $font-regular;
+                        size: 2.167rem;  // 26pt
+                    }
+
+                    @include responsive(large-screens) {
+                        font-size: 1.667rem;  // 20pt
+                    }
+                }
+            }
+
+            .menu-title {
+                &::after {
+                    display: block;
+                    content: '';
+                    width: $width-wide;
+                    height: 2px;
+                    background-color: $color-point;
+                    transform: scaleX(0);
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);  /* 1 = 100% */
+                }
+            }
+
+        }
+    }  // menu-list
+}
+
+
+
+
+
+@mixin main-title-box() {
+    .title-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px;
+        padding: 35px 0;
+        border-top: 1px solid $inform-line-gray;
+
+        @include responsive(large-screens) {
+            height: 200px; 
+        }
+
+        .title {
+            font: {
+                weight: $font-regular;
+                size: 2.5rem;  // 30pt
+            }
+        }
+
+        p {
+            font: {
+                weight: $font-regular;
+                size: 1.5rem;  // 18pt
+            }
+            color: $color-gray;
+
+            .hits {
+                display: inline;
+
+                @include responsive(large-screens) {
+                    font-size: 1.5rem;  // 18pt 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@mixin txt-box() {
+    h2 {
+        font: {
+            weight: $font-medium;
+            size: 2rem;  // 24pt
+        }
+        text-align: center;
+
+        @include responsive(large-screens) {
+            font-size: 1.333rem;  // 16pt 
+        }
+    }
+    div {
+        p,
+        strong {
+            font-size: 1.667rem;  // 20pt
+
+            @include responsive(large-screens) {
+                font-size: 1.333rem;  // 16pt 
+            }
+        }
+        strong {
+            text-decoration: underline;
+            line-height: 2;
+        }
+    }
+
+}
+
+
+
+
+
+@mixin attachment-box() {
+    .attachment-box {
+        display: flex;
+        // height: 200px;
+        padding: 45px 0;
+        border-bottom: 1px solid $inform-line-gray;
+
+        @include responsive(large-screens) {
+            padding: 35px 0;
+        }
+
+        .attachment-title {
+            margin-right: 35px;
+            width: 250px;
+            font: {
+                weight: $font-regular;
+                size: 2rem;  // 26pt
+            }
+            // background-color: aquamarine;
+
+            @include responsive(large-screens) {
+                margin-right: 45px;
+                width: 90px;
+                font-size: 1.5rem;  // 18pt 
+            }
+        }
+
+        .attachment {
+            ul {
+                li {
+                    a {
+                        font-size: 1.667rem;  // 20pt
+                        color: $color-gray;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        @include responsive(large-screens) {
+                            font-size: 1.333rem;  // 16pt 
+                        }
+                    }
+                }
+
+                .attachment1 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}  // attachment-list-box
+
+
+
+
+
+
+@mixin list-box() {
+    .list-box {
+        margin: 80px 0 180px;
+
+        @include responsive(large-screens) {
+            margin: auto;
+            width: 150px;
+        }
+        .list-btn {
+            width: $width-wide;
+            height: 80px;
+            border: 1px solid $inform-line-gray;
+            background-color: $color-second;
+
+            @include responsive(large-screens) {
+                margin: 60px 0 160px;
+                width: $width-wide;
+                height: 55px;
+            }
+
+            a {
+                font-size: 1.667rem;  
+
+                @include responsive(large-screens) {
+                    font-size: 1.333rem;   
+                }
+            }
+        }
+    }
+}  // list-box
