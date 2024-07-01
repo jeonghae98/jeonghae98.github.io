@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../../images/favicon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/exhibition.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/header_footer.js"></script>
+    <script src="./js/exhibition.js"></script>
+    <title>전시</title>
+</head>
+<body>
+    <header>
+        <div class="logo-gnb-rightmenu">
+            <div class="container">
+                <div class="logo-gnb-menu-box">
+                    <div class="logo">
+                        <h1><a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a></h1>
+                    </div>
+
+                    <nav class="main-menu" id="mainMenu">
+                        <ul class="gnb">
+                            <li>
+                                <a href="../../1.introduction/intro.html" class="gnb-title">소개</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../../1.introduction/intro.html">문화역서울284 소개</a></li>
+                                    <li><a href="../../1.introduction/guide.html">방문안내</a></li>
+                                    <li><a href="../../1.introduction/space.html">공간안내</a></li>
+                                    <li><a href="../../1.introduction/division.html">조직도</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./exhibition.html" class="gnb-title">프로그램</a>
+                                <ul class="sub-menu">
+                                    <li><a href="./exhibition.html">전시</a></li>
+                                    <li><a href="../3.event/event.html">공연/행사</a></li>
+                                    <li><a href="../5.tour/tour.html">공간투어</a></li>
+                                    <li><a href="https://my.matterport.com/show/?m=KADWpw1cse2" target="_blank">VR공간투어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../3.referenceroom/collection.html" class="gnb-title">자료실</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../../3.referenceroom/collection.html">소장품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../4.inform/notice.html" class="gnb-title">알림/소식</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../../4.inform/notice.html">공지사항</a></li>
+                                    <li><a href="../../4.inform/news.html">보도자료</a></li>
+                                </ul>
+                            </li>
+                        </ul>  <!-- gnb -->
+                    </nav>  <!-- main-menu -->
+
+                    <div class="right-menu">
+                        <ul>
+                            <li class="login"><a href="../8.login/login.html"><img src="../../images/login.png" alt="login"></a></li>
+                            <li class="search"><img src="../../images/header_search.png" alt="search"></li>  
+                        </ul>
+                        
+                        <div class="mobile-menu" id="mobileBar">  <!-- 모바일(햄버거 메뉴) -->
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>  <!-- logo-menu-box -->
+                </div>  <!-- container -->
+            </div>  <!-- logo-gnb-rightmenu -->
+    
+            <div class="header-search-box">
+                <div class="container">
+                    <input type="text" class="search-box">
+                    <img src="../../images/header_search.png" alt="search">
+                </div>
+            </div>
+    </header>
+<!-- mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm -->
+    <main>
+        <section class="intro-page">
+            <div class="container">
+                <div class="intro-text">
+                    <h1>전시</h1>
+                    <h2>展示</h2>
+                </div>
+                <p>: 역사적 공간을 재해석한 전시들을 만나보세요</p>
+            </div>
+        </section>
+        <section class="content-page">
+            <div class="container">
+                <form action="#" id="toggle-search-frm">
+                    <input type="radio" id="toggle-on" class="toggle toggle-left" name="toggle" value="false" checked>
+                    <label for="toggle-on" class="btn">진행</label>
+                    <input type="radio" id="toggle-off" class="toggle toggle-right" name="toggle" value="true">
+                    <label for="toggle-off" class="btn">종료</label>
+
+                    <div class="searchform group">
+                        <label for="search-box">
+                            <img src="./images/search.png" alt="search">
+                        </label>
+                        
+                        <input type="search" id="search-box" placeholder="">
+                    </div>
+                </form>      
+
+
+                <div class="scrollbar">
+                    <div class="ex-scroll">
+                        <div class="scrollbar-track">
+                            <div class="scrollbar-thumb"></div>
+                        </div>
+                        <div class="years">
+                            <span class="year year-2024">2024</span>
+                            <span class="year year-2023">2023</span>
+                            <span class="year year-2022">2022</span>
+                            <span class="year year-2021">2021</span>
+                            <span class="year year-2020">2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="now-exhibition carousel">
+                    <div class="exhibition-list" id="">
+                        <a href="../2.exhibition-detail/ex-detail0.html" class="2024">
+                            <h3>2024 문화역서울284 협력전시2 <br>&lt;로컬 크리에이티브 2024: The Next Community&gt;</h3>
+                            <p>운영기간 : 2024-05-17 ~ 2024-06-02</p>
+                            <img src="./images/nowex1.jpg" alt="nowex1">
+                        </a>
+                    </div>
+                </div>
+                <div class="fin-exhibition carousel">
+                    <div class="exhibition-list">
+                        <a href="../2.exhibition-detail/ex-detail1.html" id="2024">
+                            <h3>2024 문화역서울284 협력전시1 KTX 개통 20주년 <br>기념 철도문화전 <br><여정 그 너머></h3>
+                            <p>운영기간 : 2024-03-29 ~ 2024-04-21</p>
+                            <img src="./images/ex1.png" alt="ex1">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail2.html" id="2023">
+                            <h3>[대관전시] 2023 젊은건축가상展</h3>
+                            <p>운영기간 : 2023-12-20 ~ 2023-12-30</p>
+                            <img src="./images/ex2.jpg" alt="ex2">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail3.html">
+                            <h3>문화역서울284 협력전시2 <br>《서울융합예술페스티벌 언폴드엑스(Unfold X)》</h3>
+                            <p>운영기간 : 2023-11-10 ~ 2023-12-13</p>
+                            <img src="./images/ex3.jpg" alt="ex3">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail4.html">
+                            <h3>2023 대한민국건축문화제</h3>
+                            <p>운영기간 : 2023-10-25 ~ 2023-10-29</p>
+                            <img src="./images/ex4.png" alt="ex4">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail5.html">
+                            <h3>타이포잔치 2023 국제 타이포그래피 비엔날레<br> 《따옴표 열고 따옴표 닫고》</h3>
+                            <p>운영기간 : 2023-09-19 ~ 2023-10-14</p>
+                            <img src="./images/ex5.jpg" alt="ex5">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail6.html">
+                            <h3>문화역서울284 협력전시1 <br>《헤더윅 스튜디오: 감성을 빚다》</h3>
+                            <p>운영기간 : 2023-06-29 ~ 2023-09-06</p>
+                            <img src="./images/ex6.png" alt="ex6">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail7.html">
+                            <h3>2023 공예주간 특별전시 <br>《반짝반짝 작은손》</h3>
+                            <p>운영기간 : 2023-05-19 ~ 2023-05-28</p>
+                            <img src="./images/ex7.png" alt="ex7">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail8.html">
+                            <h3>문화역서울284 공예기획전 <br>《다시, 자연에게 보내는 편지》</h3>
+                            <p>운영기간 : 2023-04-04 ~ 2023-06-04</p>
+                            <img src="./images/ex8.jpg" alt="ex8">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail9.html">
+                            <h3>2023 뉴트로 페스티벌 "오늘전통"</h3>
+                            <p>운영기간 : 2023-01-19 ~ 2023-02-26</p>
+                            <img src="./images/ex9.jpg" alt="ex9">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail10.html" id="2022">
+                            <h3>[대관전시] 2022 젊은 건축가상 전시</h3>
+                            <p>운영기간 : 2022-12-22 ~ 2022-12-30</p>
+                            <img src="./images/ex10.jpg" alt="ex10">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail11.html">
+                            <h3>프리츠한센 150주년 전시<br>: Shaping the Extraordinary 영원한 아름다움</h3>
+                            <p>운영기간 : 2022-11-12 ~ 2023-01-05</p>
+                            <img src="./images/ex11.jpg" alt="ex11">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail12.html">
+                            <h3>OO디자인 어린이 프로그램<br><우리 함께 걸어요!> 그림책 전시</h3>
+                            <p>운영기간 : 2022-10-07 ~ 2022-10-14</p>
+                            <img src="./images/ex12.jpg" alt="ex12">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail13.html">
+                            <h3>길몸삶터 : 일상에서 누리는 널리 이로운 디자인 <br>(공공디자인 페스티벌 2022)</h3>
+                            <p>운영기간 : 2022-10-05 ~ 2022-10-30</p>
+                            <img src="./images/ex13.jpg" alt="ex13">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail14.html">
+                            <h3>코리안 프렌치 아트 커넥션 Ⅰ<br>(Korean & French ART Connection 1)<br> (전시/공연)</h3>
+                            <p>운영기간 : 2022-07-06 ~ 2022-07-08</p>
+                            <img src="./images/ex14.png" alt="ex14">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail15.html">
+                            <h3>나의 잠 My Sleep</h3>
+                            <p>운영기간 : 2022-07-20 ~ 2022-09-12</p>
+                            <img src="./images/ex15.jpg" alt="ex15">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail16.html">
+                            <h3>[대관전시] 2022년 철도의 날 기념 사진전</h3>
+                            <p>운영기간 : 2022-06-28 ~ 2022-06-29</p>
+                            <img src="./images/ex16.jpg" alt="ex16">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail7.html">
+                            <h3>상설 프로그램 RTO365 문화역서울284 소장품 전시 <br><시대와 공간을 잇다></h3>
+                            <p>운영기간 : 2022-06-16 ~ 2022-07-03</p>
+                            <img src="./images/ex17.jpg" alt="ex17">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail18.html">
+                            <h3>2022 공예주간 기획프로그램 <촉각의 순간들></h3>
+                            <p>운영기간 : 2022-05-20 ~ 2022-05-29</p>
+                            <img src="./images/ex18.png" alt="ex18">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail19.html">
+                            <h3>[대관 전시] 그림도시 The Last Scene<br>: See You Again!</h3>
+                            <p>운영기간 : 2022-06-17 ~ 2022-06-19</p>
+                            <img src="./images/ex19.png" alt="ex19">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail20.html">
+                            <h3>상설 프로그램 RTO365 <대장장이와 논산></h3>
+                            <p>운영기간 : 2022-03-22 ~ 2022-04-03</p>
+                            <img src="./images/ex20.jpg" alt="ex20">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail21.html">
+                            <h3>사물을 대하는 태도 All about Attitude</h3>
+                            <p>운영기간 : 2022-03-16 ~ 2022-05-29</p>
+                            <img src="./images/ex21.jpg" alt="ex21">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail22.html">
+                            <h3>한복근무복·한복교복 전시</h3>
+                            <p>운영기간 : 2022-02-09 ~ 2022-02-24</p>
+                            <img src="./images/ex22.jpg" alt="ex22">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail23.html"  id="2021">
+                            <h3>2021 젊은건축가상展</h3>
+                            <p>운영기간 : 2021-12-21 ~ 2021-12-30</p>
+                            <img src="./images/ex23.jpg" alt="ex23">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail24.html">
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><사투리를 말하다></h3>
+                            <p>운영기간 : 2021-11-14 ~ 2021-11-21</p>
+                            <img src="./images/ex24.png" alt="ex24">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail25.html">
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><서울림 도심 속 불멍></h3>
+                            <p>운영기간 : 2021-08-27 ~ 2021-08-31</p>
+                            <img src="./images/ex25.png" alt="ex25">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail26.html">
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><나에게 보내는 서신></h3>
+                            <p>운영기간 : 2021-08-13 ~ 2021-08-22</p>
+                            <img src="./images/ex26.png" alt="ex26">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail27.html">
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><함창으로부터 명주로부터></h3>
+                            <p>운영기간 : 2021-07-29 ~ 2021-08-08</p>
+                            <img src="./images/ex27.png" alt="ex27">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail28.html">
+                            <h3>2021 문화역서울 284 협력전시2 TRIPLE RINGS <br>복각본들, 어제 글피로부터</h3>
+                            <p>운영기간 : 2021-12-10 ~ 2022-01-02</p>
+                            <img src="./images/ex28.jpg" alt="ex28">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail29.html">
+                            <h3>2021 문화역서울 284 협력전시1 가상정거장</h3>
+                            <p>운영기간 : 2021-11-23 ~ 2021-12-05</p>
+                            <img src="./images/ex29.png" alt="ex29">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail30.html">
+                            <h3>[익숙한 미래 : 공공디자인이 추구하는 가치]</h3>
+                            <p>운영기간 : 2021-06-30 ~ 2021-08-29</p>
+                            <img src="./images/ex30.jpg" alt="ex30">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail31.html">
+                            <h3>보더리스 사이트</h3>
+                            <p>운영기간 : 2021-03-17 ~ 2021-05-09</p>
+                            <img src="./images/ex31.jpg" alt="ex31">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail32.html" id="2020">
+                            <h3>레코드284 - 문화를 재생하다</h3>
+                            <p>운영기간 : 2020-11-25 ~ 2021-02-28</p>
+                            <img src="./images/ex32.jpg" alt="ex32">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail33.html">
+                            <h3>2020 가을.역.산책</h3>
+                            <p>운영기간 : 2020-10-09 ~ 2020-10-31</p>
+                            <img src="./images/ex33.jpg" alt="ex33">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail34.html">
+                            <h3>2020 플랫폼284 tmo</h3>
+                            <p>운영기간 : 2020-07-14 ~ 2020-12-27</p>
+                            <img src="./images/ex34.png" alt="ex34">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail35.html">
+                            <h3>여행의 새발견</h3>
+                            <p>운영기간 : 2020-06-23 ~ 2020-08-30</p>
+                            <img src="./images/ex35.jpg" alt="ex35">
+                        </a>
+                        <a href="../2.exhibition-detail/ex-detail36.html">
+                            <h3>호텔사회</h3>
+                            <p>운영기간 : 2020-01-08 ~ 2020-03-01</p>
+                            <img src="./images/ex36.png" alt="ex36">
+                        </a>
+                    </div> <!-- exhibition-list -->
+                </div> <!-- fin-exhibition -->
+            </div> <!-- container -->
+        </section>
+    </main>
+    <!--mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  -->
+    <footer>
+        <div class="footer-img"><img src="../../images/footer_image.png" alt="footer image"></div>
+        
+        <div class="footerlogo-info">
+            <div class="container">
+                <div class="footer-content-box">
+                    <div class="footer-logo"><h2></h2></div>
+                    
+                    <div class="division-line"></div>
+
+                    <div class="footer-info-box">
+                        <div class="info">
+                            <div class="address">
+                                <strong>주소</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <address class="txt">04509 서울특별시 중구 통일로 1 서울역(본옥) 문화역서울284</address>
+                            </div>
+                            <div class="tel">
+                                <strong>전화번호/FAX</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <ul>
+                                    <li><address class="txt">Tel. 02-3407-3500</address></li>
+                                    <li><address class="txt">Fax. 02-3407-3510</address></li>
+                                </ul>
+                            </div>
+                            <div class="sns">
+                                <strong>SNS</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/seoul284/?locale=ko_KR" class="txt">Facebook</a></li>
+                                    <li><a href="https://www.youtube.com/seoul284official" class="txt">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/culturestationseoul284/" class="txt">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>  <!-- info -->
+                        
+                        <div class="copyright">
+                            <p>Copyright © 2021. KOREA CRAFT & DESIGN FOUNDATION. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>  <!-- footer-content-box -->
+            </div>  <!-- container -->
+        </div>  <!-- footerlogo-info -->
+        
+        <div class="fixed-menu">
+            <a href="#">↑</a>
+        </div>
+    </footer>
+</body>
+</html>
