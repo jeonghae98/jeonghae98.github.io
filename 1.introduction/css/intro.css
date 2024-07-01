@@ -1,0 +1,1751 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+strong,
+span {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 12vh;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 150px;
+  }
+}
+header.active {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  header:after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.sub-bg:after {
+    background-color: #fff;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.active:after {
+    height: 220px;
+  }
+}
+header .logo-gnb-rightmenu {
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu.active {
+  z-index: 2;
+  background-color: #fff;
+}
+header .logo-gnb-rightmenu .container {
+  height: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+  position: relative;
+  z-index: 10;
+  width: 30%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+    width: 191px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55px;
+    z-index: 5;
+    width: 100%;
+    padding: 0 20vw;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+    height: 270px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+  margin-top: 10vh;
+  padding-left: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.667rem;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+    display: block;
+    width: 150px;
+    height: 80px;
+    line-height: 78px;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 1.167rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.active {
+  text-decoration: none;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li:last-child a {
+    margin-right: 0;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+    position: absolute;
+    display: block;
+    padding-top: 30px;
+    width: 100%;
+    height: 270px;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a {
+    display: block;
+    width: 150px;
+    line-height: 2.2;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+  text-decoration: underline;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile {
+  position: absolute;
+  bottom: 12vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  width: 100%;
+  height: 15vh;
+  border-top: 1px solid #dbdbdb;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .small-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 17%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+    position: relative;
+    z-index: 6;
+    display: block;
+    margin: 20px 35px 0 45px;
+    width: 85px;
+    height: 21px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+    display: block;
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+  width: 100%;
+  cursor: pointer;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search.hide {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search img {
+  width: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+  position: relative;
+  z-index: 2000;
+  width: 35%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+    display: none;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 2vw 0;
+  border-radius: 10px;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:first-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:last-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active {
+  height: 50px;
+  position: relative;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: none;
+  background-color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:first-child {
+  transform: rotate(-45deg);
+  display: block;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:last-child {
+  transform: rotate(45deg);
+  display: block;
+}
+header .header-search-box {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 12vh;
+  width: 100%;
+  height: 11vh;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box {
+    top: 150px;
+    height: 80px;
+  }
+}
+header .header-search-box .search-box {
+  position: absolute;
+  left: 50%;
+  top: 3vh;
+  transform: translateX(-50%);
+  padding-left: 10px;
+  width: 90%;
+  height: 5vh;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box .search-box {
+    top: 20px;
+    width: 1000px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+header .header-search-box .search-box:focus {
+  outline: none;
+}
+header .header-search-box img {
+  width: auto;
+  height: 3vh;
+  cursor: pointer;
+  position: absolute;
+  right: 7vw;
+  top: 4vh;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box img {
+    right: 230px;
+    top: 27px;
+    width: 26px;
+    height: auto;
+  }
+}
+header .header-search-box.visible {
+  display: block;
+}
+header .header-search-box.sub-visible {
+  display: block;
+  background-color: #fff;
+}
+
+main {
+  overflow: hidden;
+}
+main .container section.main-title h2 {
+  margin: 120px 0 50px 0;
+  font-font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+main .container section.main-title p {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #323232;
+  animation-duration: 2s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title p {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+main .container section.main-title img {
+  width: 330px;
+  height: auto;
+  margin: 0 auto;
+  animation-duration: 3s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title img {
+    width: 50%;
+    height: auto;
+  }
+}
+main .container section.main-title .sec1-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title .sec1-menu {
+    width: 50%;
+  }
+}
+main .container section.main-title .sec1-menu div:first-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  background-color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title .sec1-menu div:first-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .container section.main-title .sec1-menu div:first-child a {
+  color: #fff;
+}
+main .container section.main-title .sec1-menu div:nth-child(2) {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title .sec1-menu div:nth-child(2) {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .container section.main-title .sec1-menu div:nth-child(2) a:hover {
+  color: #ff6000;
+}
+main .container section.main-title .sec1-menu div:last-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+}
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title .sec1-menu div:last-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .container section.main-title .sec1-menu div:last-child a:hover {
+  color: #ff6000;
+}
+main hr {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  background-color: #000;
+}
+main section.box1 {
+  width: 100%;
+  height: auto;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-image: url(../images/1900m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 0px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../images/1900_bg.png);
+    background-size: cover;
+  }
+}
+main section.box1 .box1-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line {
+    width: 100%;
+    height: 997px;
+    margin-bottom: 2px;
+    border: 1px dashed black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+}
+main section.box1 .box1-line .container .box1-txt {
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt {
+    height: 996px;
+  }
+}
+main section.box1 .box1-line .container .box1-txt .box1-title {
+  opacity: 0;
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt .box1-title {
+    padding-top: 130px;
+  }
+}
+main section.box1 .box1-line .container .box1-txt .box1-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt .box1-title h2 {
+    width: 100%;
+    font-size: 2.5rem;
+    margin-top: 3%;
+    padding-left: 58%;
+  }
+}
+main section.box1 .box1-line .container .box1-txt .box1-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt .box1-title p {
+    width: 30%;
+    margin-bottom: 1%;
+    margin-left: 58%;
+    color: #323232;
+  }
+}
+main section.box1 .box1-line .container .box1-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+main section.box1 .box1-line .container .box1-txt ul.years li {
+  opacity: 0;
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt ul.years li {
+    margin-left: 65%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+main section.box1 .box1-line .container .box1-txt ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt ul.years li span.orange {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+main section.box1 .box1-line .container .box1-txt ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box1 .box1-line .container .box1-txt ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt ul.years li span.black {
+    margin-top: 0;
+    padding-top: 30px;
+    padding-left: 4px;
+  }
+}
+main section.box1 .box1-line .container .box1-txt ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box1 .box1-line .container .box1-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+  }
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 110px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+    top: 193px;
+  }
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line img {
+  position: absolute;
+  bottom: -5px;
+  left: -28px;
+  width: 60px;
+  height: auto;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line img {
+    width: 150px;
+    bottom: -5px;
+    left: -73px;
+  }
+}
+main section.box1 .box1-line .container .sec1-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+main section.box1 .box1-line .container .sec1-menu div:first-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+}
+main section.box1 .box1-line .container .sec1-menu div:first-child a:hover {
+  color: #ff6000;
+}
+main section.box1 .box1-line .container .sec1-menu div:nth-child(2) {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  background-color: #ff6000;
+}
+main section.box1 .box1-line .container .sec1-menu div:nth-child(2) a {
+  color: #fff;
+}
+main section.box1 .box1-line .container .sec1-menu div:last-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+}
+main section.box1 .box1-line .container .sec1-menu div:last-child a:hover {
+  color: #ff6000;
+}
+main section.box2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-image: url(../images/1925m_bg.png);
+  background-size: cover;
+  background-position-x: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    border: none;
+    background-image: url(../images/1925_bg.png);
+    background-position-x: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+main section.box2 .box2-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line {
+    border: none;
+  }
+}
+main section.box2 .box2-line .box2-title {
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .box2-title {
+    padding-top: 130px;
+  }
+}
+main section.box2 .box2-line .box2-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .box2-title h2 {
+    width: 73%;
+    padding-right: 44.6%;
+    margin-top: 3%;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+}
+main section.box2 .box2-line .box2-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .box2-title p {
+    text-align: right;
+    width: 60%;
+    padding-right: 38.3%;
+    margin-bottom: 1%;
+    color: #323232;
+  }
+}
+main section.box2 .box2-line ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line ul.years {
+    width: 100%;
+    padding-right: 68%;
+    text-align: right;
+  }
+}
+main section.box2 .box2-line ul.years li {
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line ul.years li p {
+    width: 62%;
+    margin-left: 68%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: right;
+  }
+}
+main section.box2 .box2-line ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line ul.years li span.orange {
+    text-align: right;
+    margin-top: 0;
+    margin-left: 19%;
+    padding-top: 30px;
+    padding-left: 100%;
+  }
+}
+main section.box2 .box2-line ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+  text-align: right;
+}
+main section.box2 .box2-line ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line ul.years li span.black {
+    margin-top: 0;
+    margin-left: 19%;
+    padding-top: 30px;
+    padding-left: 100%;
+    text-align: right;
+  }
+}
+main section.box2 .box2-line ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box2 .box2-line ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 100px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+    top: 200px;
+  }
+}
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box2 .box2-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box2 .box2-line hr {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line hr {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 949px;
+    width: 86.6%;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+}
+main section.box3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-image: url(../images/2004m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 {
+    background-image: url(../images/2004_bg\ \(2\).png);
+    background-position-x: 255px;
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
+}
+main section.box3 .box3-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border-top: 1px dashed black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line {
+    height: 600px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position-x: 255px;
+    background-size: 900px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt {
+    width: 100%;
+    height: 600px;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title {
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title {
+    width: 100%;
+    padding-left: 55%;
+    padding-top: 110px;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title h2 {
+    width: 100%;
+    margin-top: 3%;
+    font-size: 2.5rem;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title p {
+    width: 80%;
+    padding-right: 30%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    color: #323232;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years {
+    width: 100%;
+    padding-left: 55%;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li {
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li p {
+    width: 62%;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li span.orange {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box3 .box3-line .box-txt ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li span.black {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box3 .box3-line .box-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 100px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+    top: 155px;
+  }
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box3 .box3-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box4 {
+  position: relative;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  width: 100%;
+  height: auto;
+  margin-bottom: 200px;
+  background-image: url(../images/2011m_bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 {
+    border-top: 2px solid #c2c2c2;
+    border-bottom: 2px solid #c2c2c2;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 200px;
+    background-image: url(../images/2011_bg.png);
+    background-position-x: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+main section.box4 .box4-line {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-top: 1px dashed black;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line {
+    border: none;
+  }
+}
+main section.box4 .box4-line .box4-title {
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title {
+    padding-top: 67px;
+  }
+}
+main section.box4 .box4-line .box4-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title h2 {
+    width: 73%;
+    padding-right: 44.6%;
+    margin-top: 3%;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line .box4-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title p {
+    text-align: right;
+    width: 60%;
+    padding-right: 38.3%;
+    margin-bottom: 1%;
+    color: #323232;
+  }
+}
+main section.box4 .box4-line ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years {
+    width: 100%;
+    padding-right: 68%;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li {
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li p {
+    width: 62%;
+    margin-left: 68%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li span.orange {
+    text-align: right;
+    margin-top: 0;
+    margin-left: 17%;
+    padding-top: 30px;
+    padding-left: 100%;
+  }
+}
+main section.box4 .box4-line ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+  text-align: right;
+}
+main section.box4 .box4-line ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li span.black {
+    margin-top: 0;
+    margin-left: 19%;
+    padding-top: 30px;
+    padding-left: 100%;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box4 .box4-line ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 100px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+    top: 130px;
+  }
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box4 .box4-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box4 .box4-line hr {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line hr {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 949px;
+    width: 86.6%;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+main .fade-in {
+  animation: slideInFromLeft 0.6s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .fade-in-slow {
+  animation: fadeIn 1s ease forwards;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info {
+  padding: 35px 20px;
+}
+footer .footerlogo-info .footer-content-box {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box {
+    display: flex;
+    width: 82%;
+    height: 150px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo {
+    margin-right: 6%;
+    width: 290px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo h2 {
+    line-height: 1.2;
+    font-size: 3.75rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info {
+    width: 100%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+    margin-bottom: 15px;
+    font-size: 1.167rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #b0afaf;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 41px;
+  height: 100%;
+  background-color: #717171;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+    width: 33px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+  width: 45%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+    width: 40%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+    width: 35%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+    width: 25%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+  width: 80%;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+    width: 75%;
+    font-size: 1rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+  width: 100%;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+    margin-top: 0;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+footer .fixed-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
+  }
+}
+footer .fixed-menu a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+footer .fixed-menu a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=intro.css.map */

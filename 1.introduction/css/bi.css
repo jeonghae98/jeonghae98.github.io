@@ -1,0 +1,1324 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+strong,
+span {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 12vh;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 150px;
+  }
+}
+header.active {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  header:after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.sub-bg:after {
+    background-color: #fff;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.active:after {
+    height: 220px;
+  }
+}
+header .logo-gnb-rightmenu {
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu.active {
+  z-index: 2;
+  background-color: #fff;
+}
+header .logo-gnb-rightmenu .container {
+  height: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+  position: relative;
+  z-index: 10;
+  width: 30%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+    width: 191px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55px;
+    z-index: 5;
+    width: 100%;
+    padding: 0 20vw;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+    height: 270px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+  margin-top: 10vh;
+  padding-left: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.667rem;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+    display: block;
+    width: 150px;
+    height: 80px;
+    line-height: 78px;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 1.167rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.active {
+  text-decoration: none;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li:last-child a {
+    margin-right: 0;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+    position: absolute;
+    display: block;
+    padding-top: 30px;
+    width: 100%;
+    height: 270px;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a {
+    display: block;
+    width: 150px;
+    line-height: 2.2;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+  text-decoration: underline;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile {
+  position: absolute;
+  bottom: 12vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  width: 100%;
+  height: 15vh;
+  border-top: 1px solid #dbdbdb;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .small-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 17%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+    position: relative;
+    z-index: 6;
+    display: block;
+    margin: 20px 35px 0 45px;
+    width: 85px;
+    height: 21px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+    display: block;
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+  width: 100%;
+  cursor: pointer;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search.hide {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search img {
+  width: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+  position: relative;
+  z-index: 2000;
+  width: 35%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+    display: none;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 2vw 0;
+  border-radius: 10px;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:first-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:last-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active {
+  height: 50px;
+  position: relative;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: none;
+  background-color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:first-child {
+  transform: rotate(-45deg);
+  display: block;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:last-child {
+  transform: rotate(45deg);
+  display: block;
+}
+header .header-search-box {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 12vh;
+  width: 100%;
+  height: 11vh;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box {
+    top: 150px;
+    height: 80px;
+  }
+}
+header .header-search-box .search-box {
+  position: absolute;
+  left: 50%;
+  top: 3vh;
+  transform: translateX(-50%);
+  padding-left: 10px;
+  width: 90%;
+  height: 5vh;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box .search-box {
+    top: 20px;
+    width: 1000px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+header .header-search-box .search-box:focus {
+  outline: none;
+}
+header .header-search-box img {
+  width: auto;
+  height: 3vh;
+  cursor: pointer;
+  position: absolute;
+  right: 7vw;
+  top: 4vh;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box img {
+    right: 230px;
+    top: 27px;
+    width: 26px;
+    height: auto;
+  }
+}
+header .header-search-box.visible {
+  display: block;
+}
+header .header-search-box.sub-visible {
+  display: block;
+  background-color: #fff;
+}
+
+main .sec1 {
+  padding-top: 100px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 {
+    margin-bottom: 150px;
+  }
+}
+main .sec1 .container .sec1-title {
+  text-align: center;
+  animation-duration: 2s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .sec1 .container .sec1-title h2 {
+  text-align: center;
+  animation-duration: 1s;
+  animation-name: move;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-title h2 {
+    margin-top: 80px;
+    font-size: 2.5rem;
+    color: #323232;
+  }
+}
+main .sec1 .container .sec1-title p {
+  padding: 3px 0 50px 0;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-title p {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+}
+main .sec1 .container .sec1-title img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-title img {
+    padding: 20px 0 20px 0;
+    width: 20%;
+  }
+}
+main .sec1 .container .sec1-info {
+  margin-top: 30px;
+  text-align: center;
+  animation-duration: 1s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .sec1 .container .sec1-info strong {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px 0 3px 0;
+  font-size: 1.1rem;
+  border-top: 2px solid #f1f1f1;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-info strong {
+    border-style: none;
+    font-size: 1.2rem;
+  }
+}
+main .sec1 .container .sec1-info p {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  font-size: 0.9rem;
+  color: #323232;
+}
+main .sec1 .container .sec1-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  animation-duration: 1s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-menu {
+    width: 50%;
+  }
+}
+main .sec1 .container .sec1-menu div:first-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-menu div:first-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .sec1 .container .sec1-menu div:first-child a:hover {
+  color: #ff6000;
+}
+main .sec1 .container .sec1-menu div:nth-child(2) {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+  background-color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-menu div:nth-child(2) {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .sec1 .container .sec1-menu div:nth-child(2) a {
+  color: #fff;
+}
+main .sec1 .container .sec1-menu div:last-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec1 .container .sec1-menu div:last-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+main .sec1 .container .sec1-menu div:last-child a:hover {
+  color: #ff6000;
+}
+main .sec2 {
+  margin-top: 10%;
+  padding: 100px 0 100px 0;
+  background-image: url(../images/overlay_bg.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .sec2 .container .sec2-title {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+main .sec2 .container .sec2-title h2 {
+  opacity: 0;
+  font-weight: 600;
+  padding: 0 0 50px 0;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec2 .container .sec2-title h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+  }
+}
+main .sec2 .container .sec2-title p {
+  opacity: 0;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec2 .container .sec2-title p {
+    font-size: 1rem;
+  }
+}
+main .sec2 .container .img-box {
+  width: 70%;
+  margin: 0 auto;
+}
+main .sec2 .container .img-box img {
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec2 .container .img-box img {
+    width: 50%;
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+}
+main .sec2 .container .img-box .img-box-inner {
+  display: flex;
+  align-items: center;
+}
+main .sec2 .container .img-box .img-box-inner p {
+  font-size: 0.7rem;
+  padding: 0 0 150px 0;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec2 .container .img-box .img-box-inner p {
+    width: 300px;
+    height: 60px;
+    line-height: 150px;
+    padding-left: 135px;
+  }
+}
+main .sec3 {
+  padding: 100px 0 100px 0;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main .sec3 .container .sec3-box1 strong {
+  font-size: 1.2rem;
+  padding: 0px 0 30px 0;
+}
+main .sec3 .container .sec3-box1 img {
+  width: 60%;
+  margin: 0 auto;
+}
+main .sec3 .container p {
+  margin-top: 90px;
+  font-size: 0.7rem;
+  color: #323232;
+}
+main .sec3 .container .sec3-box2 strong {
+  font-size: 1.2rem;
+  padding: 100px 0 30px 0;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container .sec3-box2 strong {
+    padding: 0 0 28px 0;
+  }
+}
+main .sec3 .container .sec3-box2 img {
+  width: 60%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container .sec3-box2 img {
+    padding: 0 0 10px 0;
+  }
+}
+main .sec3 .container p {
+  margin-top: 90px;
+  font-size: 0.7rem;
+  color: #323232;
+}
+main .sec3 .container .sec3-box3 strong {
+  font-size: 1.2rem;
+  padding: 100px 0 30px 0;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container .sec3-box3 strong {
+    font-size: 1.2rem;
+    line-height: 150px;
+  }
+}
+main .sec3 .container .sec3-box3 img {
+  width: 60%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container .sec3-box3 img {
+    padding-bottom: 200px;
+  }
+}
+main .sec4 {
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 {
+    margin-bottom: 200px;
+  }
+}
+main .sec4 .sec4-title h2 {
+  padding-bottom: 50px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .sec4-title h2 {
+    font-size: 2.1rem;
+  }
+}
+main .sec4 .sec4-title p {
+  width: 80%;
+  margin: auto;
+  font-size: 0.87rem;
+  text-align: center;
+  color: #323232;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .sec4-title p {
+    width: 20%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+}
+main .sec4 .color {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color {
+    display: flex;
+  }
+}
+main .sec4 .color .color1 {
+  width: 100%;
+}
+main .sec4 .color .color1 .orange {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange {
+    width: 100%;
+    height: 600px;
+    margin-top: 0px;
+  }
+}
+main .sec4 .color .color1 .orange .inner-box1 {
+  width: 100%;
+  height: 20%;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgb(240, 100, 0);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange .inner-box1 {
+    padding-left: 80px;
+    padding-top: 40px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color1 .orange .inner-box2 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(240, 100, 0, 0.9);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange .inner-box2 {
+    padding-left: 80px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color1 .orange .inner-box3 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(240, 100, 0, 0.8);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange .inner-box3 {
+    padding-left: 80px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color1 .orange .inner-box4 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(240, 100, 0, 0.7);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange .inner-box4 {
+    padding-left: 80px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color1 .orange .inner-box5 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(240, 100, 0, 0.6);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color1 .orange .inner-box5 {
+    padding-left: 80px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color2 {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 {
+    width: 50%;
+  }
+}
+main .sec4 .color .color2 .orange {
+  width: 100%;
+  height: 400px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange {
+    height: 600px;
+  }
+}
+main .sec4 .color .color2 .orange .inner-box1 {
+  width: 100%;
+  height: 20%;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgb(251, 120, 41);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange .inner-box1 {
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color2 .orange .inner-box2 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(251, 120, 41, 0.9);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange .inner-box2 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color2 .orange .inner-box3 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(251, 120, 41, 0.8);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange .inner-box3 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color2 .orange .inner-box4 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(251, 120, 41, 0.7);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange .inner-box4 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color2 .orange .inner-box5 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(251, 120, 41, 0.6);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color2 .orange .inner-box5 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color3 {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 {
+    width: 50%;
+  }
+}
+main .sec4 .color .color3 .orange {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange {
+    height: 400px;
+    height: 600px;
+  }
+}
+main .sec4 .color .color3 .orange .inner-box1 {
+  width: 100%;
+  height: 20%;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgb(155, 155, 155);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange .inner-box1 {
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color3 .orange .inner-box2 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(155, 155, 155, 0.9);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange .inner-box2 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color3 .orange .inner-box3 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(155, 155, 155, 0.8);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange .inner-box3 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color3 .orange .inner-box4 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(155, 155, 155, 0.7);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange .inner-box4 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+main .sec4 .color .color3 .orange .inner-box5 {
+  width: 100%;
+  height: 20%;
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(155, 155, 155, 0.6);
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .color .color3 .orange .inner-box5 {
+    padding-left: 60px;
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info {
+  padding: 35px 20px;
+}
+footer .footerlogo-info .footer-content-box {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box {
+    display: flex;
+    width: 82%;
+    height: 150px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo {
+    margin-right: 6%;
+    width: 290px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo h2 {
+    line-height: 1.2;
+    font-size: 3.75rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info {
+    width: 100%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+    margin-bottom: 15px;
+    font-size: 1.167rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #b0afaf;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 41px;
+  height: 100%;
+  background-color: #717171;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+    width: 33px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+  width: 45%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+    width: 40%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+    width: 35%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+    width: 25%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+  width: 80%;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+    width: 75%;
+    font-size: 1rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+  width: 100%;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+    margin-top: 0;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+footer .fixed-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
+  }
+}
+footer .fixed-menu a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+footer .fixed-menu a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=bi.css.map */

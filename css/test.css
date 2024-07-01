@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #ff6000;
+}
+
+strong,
+span {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  display: block;
+}
+
+.mobile-menu {
+  cursor: pointer;
+}
+.mobile-menu .bar {
+  width: 40px;
+  height: 3px;
+  background: #000;
+  margin: 10px 10px;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.mobile-menu .bar:first-child {
+  transform: rotate(0deg);
+}
+.mobile-menu .bar:last-child {
+  transform: rotate(0deg);
+}
+.mobile-menu.active {
+  height: 50px;
+  position: relative;
+}
+.mobile-menu.active div {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.mobile-menu.active div:first-child {
+  transform: rotate(-45deg);
+  display: block;
+}
+.mobile-menu.active div:last-child {
+  transform: rotate(45deg);
+  display: block;
+}
+
+.main-menu {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0px;
+  background: #fff;
+  width: 0px;
+  transition: width 0.5s ease;
+}
+.main-menu .gnb .sub-menu {
+  display: none;
+}
+
+.active {
+  width: 100%;
+}/*# sourceMappingURL=test.css.map */

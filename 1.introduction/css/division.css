@@ -1,0 +1,1124 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+strong,
+span {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 12vh;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 150px;
+  }
+}
+header.active {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  header:after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.sub-bg:after {
+    background-color: #fff;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header.active:after {
+    height: 220px;
+  }
+}
+header .logo-gnb-rightmenu {
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu.active {
+  z-index: 2;
+  background-color: #fff;
+}
+header .logo-gnb-rightmenu .container {
+  height: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+  position: relative;
+  z-index: 10;
+  width: 30%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+    width: 191px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55px;
+    z-index: 5;
+    width: 100%;
+    padding: 0 20vw;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+    height: 270px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+  margin-top: 10vh;
+  padding-left: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.667rem;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+    display: block;
+    width: 150px;
+    height: 80px;
+    line-height: 78px;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 1.167rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.active {
+  text-decoration: none;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li:last-child a {
+    margin-right: 0;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+    position: absolute;
+    display: block;
+    padding-top: 30px;
+    width: 100%;
+    height: 270px;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a {
+    display: block;
+    width: 150px;
+    line-height: 2.2;
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+  text-decoration: underline;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+    color: #fff;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile {
+  position: absolute;
+  bottom: 12vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  width: 100%;
+  height: 15vh;
+  border-top: 1px solid #dbdbdb;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .small-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile .login-txt a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 17%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
+    position: relative;
+    z-index: 6;
+    display: block;
+    margin: 20px 35px 0 45px;
+    width: 85px;
+    height: 21px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
+    display: block;
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+  width: 100%;
+  cursor: pointer;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search.hide {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+    width: 27px;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search img {
+  width: 100%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+  position: relative;
+  z-index: 2000;
+  width: 35%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
+    display: none;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 2vw 0;
+  border-radius: 10px;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:first-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar:last-child {
+  transform: rotate(0deg);
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active {
+  height: 50px;
+  position: relative;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: none;
+  background-color: #000;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:first-child {
+  transform: rotate(-45deg);
+  display: block;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div:last-child {
+  transform: rotate(45deg);
+  display: block;
+}
+header .header-search-box {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 12vh;
+  width: 100%;
+  height: 11vh;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box {
+    top: 150px;
+    height: 80px;
+  }
+}
+header .header-search-box .search-box {
+  position: absolute;
+  left: 50%;
+  top: 3vh;
+  transform: translateX(-50%);
+  padding-left: 10px;
+  width: 90%;
+  height: 5vh;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box .search-box {
+    top: 20px;
+    width: 1000px;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+header .header-search-box .search-box:focus {
+  outline: none;
+}
+header .header-search-box img {
+  width: auto;
+  height: 3vh;
+  cursor: pointer;
+  position: absolute;
+  right: 7vw;
+  top: 4vh;
+}
+@media only screen and (min-width: 1024px) {
+  header .header-search-box img {
+    right: 230px;
+    top: 27px;
+    width: 26px;
+    height: auto;
+  }
+}
+header .header-search-box.visible {
+  display: block;
+}
+header .header-search-box.sub-visible {
+  display: block;
+  background-color: #fff;
+}
+
+main {
+  overflow: hidden;
+}
+main .container h2 {
+  margin: 60px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .container h2 {
+    font-size: 2.5rem;
+    margin-top: 200px;
+  }
+}
+main .container img {
+  width: 20%;
+  height: auto;
+}
+main .container .div-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box {
+    padding: 100px;
+    width: 80%;
+  }
+}
+main .container .div-box .boss {
+  width: 60%;
+  margin: auto;
+}
+main .container .div-box .boss img {
+  margin: 0 auto;
+}
+main .container .div-box .boss p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: #ff6000;
+  color: white;
+}
+main .container .div-box .boss p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+  color: white;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .boss p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .boss p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .inner-box1 {
+  display: flex;
+  justify-content: space-around;
+}
+main .container .div-box .inner-box1 .manager {
+  width: 40%;
+}
+main .container .div-box .inner-box1 .manager img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box1 .manager p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  background-color: white;
+}
+main .container .div-box .inner-box1 .manager p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box1 .manager p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box1 .manager p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .inner-box1 .manager2 {
+  width: 40%;
+}
+main .container .div-box .inner-box1 .manager2 img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box1 .manager2 p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  background-color: white;
+  padding: 5px;
+}
+main .container .div-box .inner-box1 .manager2 p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box1 .manager2 p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box1 .manager2 p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .deco {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+main .container .div-box .deco-circle1 {
+  left: 19%;
+  top: 570px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff8665;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .deco-circle1 {
+    left: 250px;
+    top: 1000px;
+    width: 60px;
+    height: 60px;
+  }
+}
+main .container .div-box .deco-circle2 {
+  left: 12%;
+  top: 600px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff8665;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .deco-circle2 {
+    left: 300px;
+    top: 905px;
+    width: 100px;
+    height: 100px;
+  }
+}
+main .container .div-box .deco-circle3 {
+  top: 90px;
+  left: 280px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff8665;
+  z-index: 0;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .deco-circle3 {
+    left: 1120px;
+    top: 180px;
+    width: 70px;
+    height: 70px;
+  }
+}
+main .container .div-box .deco-circle4 {
+  top: 120px;
+  left: 310px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ff8665;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .deco-circle4 {
+    left: 1200px;
+    top: 70px;
+    width: 100px;
+    height: 100px;
+  }
+}
+main .container .div-box .inner-box2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 80px;
+  margin-top: 30px;
+}
+main .container .div-box .inner-box2 .emp {
+  width: 100%;
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box2 .emp p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box2 .emp p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box2 .emp p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p {
+    margin-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  main .container .div-box .inner-box2 .emp p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .boss-curator {
+  width: 60%;
+  margin: auto;
+}
+main .container .div-box .boss-curator img {
+  margin: 0 auto;
+}
+main .container .div-box .boss-curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  text-align: center;
+  font-weight: 400;
+  background-color: white;
+}
+main .container .div-box .boss-curator p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .boss-curator p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .boss-curator p {
+    font-size: 1rem;
+    width: 70%;
+  }
+}
+main .container .div-box .inner-box3 {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .div-box .inner-box3 .curator {
+  width: 50%;
+}
+main .container .div-box .inner-box3 .curator img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box3 .curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box3 .curator p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box3 .curator p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box3 .curator p {
+    font-size: 1rem;
+  }
+}
+main .container .div-box .inner-box3 .curator img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box3 .curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box3 .curator p span {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 4px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box3 .curator p span {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .container .div-box .inner-box3 .curator p {
+    font-size: 1rem;
+  }
+}
+main .container .tb table {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  margin-top: 100px;
+  border-collapse: collapse;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .tb table {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 200px;
+    margin-top: 100px;
+  }
+}
+main .container .tb table thead {
+  border: 1px solid #e9e9e9;
+  background-color: #f3f3f3;
+}
+main .container .tb table thead th {
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .tb table thead th {
+    font-size: 1.3rem;
+  }
+}
+main .container .tb table thead th:first-child {
+  width: 30%;
+  height: 50px;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .tb table thead th:first-child {
+    width: 30%;
+    height: 10px;
+  }
+}
+main .container .tb table thead th:nth-child(2) {
+  width: 20%;
+  height: 50px;
+}
+main .container .tb table tbody tr {
+  border-radius: 30px;
+  text-align: center;
+  width: 20%;
+  height: 100px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .tb table tbody tr {
+    font-size: 1rem;
+  }
+}
+main .container .tb table tfoot {
+  width: 100%;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main .container .tb table tfoot {
+    width: 100%;
+    height: 10px;
+    font-size: 1rem;
+  }
+}
+main .container .tb table tfoot td {
+  padding: 20px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info {
+  padding: 35px 20px;
+}
+footer .footerlogo-info .footer-content-box {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box {
+    display: flex;
+    width: 82%;
+    height: 150px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo {
+    margin-right: 6%;
+    width: 290px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo h2 {
+    line-height: 1.2;
+    font-size: 3.75rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info {
+    width: 100%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+    margin-bottom: 15px;
+    font-size: 1.167rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #b0afaf;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 41px;
+  height: 100%;
+  background-color: #717171;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+    width: 33px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+  width: 45%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+    width: 40%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+    width: 35%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+    width: 25%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+  width: 80%;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+    width: 75%;
+    font-size: 1rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+  width: 100%;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+    margin-top: 0;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #353535;
+}
+footer .fixed-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
+  }
+}
+footer .fixed-menu a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+footer .fixed-menu a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=division.css.map */
